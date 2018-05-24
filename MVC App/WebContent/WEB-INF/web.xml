@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>MVC App</display-name>
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/views/house.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>GetAllContactsServlet</servlet-name>
+    <servlet-class>com.slk.mvcapp.web.controllers.GetAllContactsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllContactsServlet</servlet-name>
+    <url-pattern>/get-all-contacts</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddNewContactServlet</display-name>
+    <servlet-name>AddNewContactServlet</servlet-name>
+    <servlet-class>com.slk.mvcapp.web.controllers.AddNewContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddNewContactServlet</servlet-name>
+    <url-pattern>/add-new-contact</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditContactServlet</display-name>
+    <servlet-name>EditContactServlet</servlet-name>
+    <servlet-class>com.slk.mvcapp.web.controllers.EditContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditContactServlet</servlet-name>
+    <url-pattern>/edit-contact</url-pattern>
+  </servlet-mapping>
+</web-app>

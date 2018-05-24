@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Demo</title>
+	<script type="text/javascript" src="./jquery/jquery-3.3.1.js"></script>
+	
+	<style type="text/css">
+		/* (space) ancestor descendant */
+		/* ( > symbol ) parent child */
+		div#picture_div img {
+			border-radius: 10px;
+			width: 450px;
+		}
+	</style>
+</head>
+<body>
+	<h1>jQuery Demo</h1>
+	<hr />
+
+	<button id="btn1"><h3>Hide picture</h3></button>
+
+	<div id="picture_div">
+		<div>
+			<img src="./images/cute-goat.jpg" >
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		$('#btn1').click(function(){
+			var btnCaption = $('#btn1 > h3').html();
+			if(btnCaption=='Hide picture') {
+				$('#picture_div img').fadeOut(2000);
+				$('#btn1 > h3').html('Show picture');
+			}
+			else {
+				$('#picture_div img').fadeIn(2000);
+				$('#btn1 > h3').html('Hide picture');
+			}
+			
+		});
+	</script>
+</body>
+</html>
+
+
+
+

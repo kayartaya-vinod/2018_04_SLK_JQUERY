@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Demo</title>
+	<script type="text/javascript" src="./jquery/jquery-3.3.1.js"></script>
+	
+</head>
+<body>
+	<h1>jQuery Demo</h1>
+	<hr />
+
+	<div id="images">
+		<img src="./images/img1.jpg" />
+		<img src="./images/img2.jpg" />
+		<img src="./images/img3.jpg" />
+		<img src="./images/img4.jpg" />
+		<img src="./images/img5.jpg" />
+		<img src="./images/img6.jpg" />
+		<img src="./images/img7.jpg" />
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		
+		$('div#images > img').css({
+			"width": "600px",
+			"height": "400px",
+			"position": "absolute"
+		}).click(function(){
+			$(this).fadeOut(1000, function(){
+				$(this).prependTo('div#images').css('display', 'block');
+			});
+		});
+
+		setInterval(function(){
+			$('img:last').click()
+		}, 1000)
+
+	</script>
+</body>
+</html>
+
+
+
+
